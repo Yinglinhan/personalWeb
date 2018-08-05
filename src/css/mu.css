@@ -1,0 +1,1050 @@
+/*----------------------- 调整默认样式 ---------------------*/
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+/* --------------- loading ---------------- */
+.mask-layer{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #3D06FF;
+    z-index: 1000;
+}
+
+
+/*----------------------- 大板块样式 ---------------------*/
+
+.part1{
+    height: 2800px;
+    background-color: #0E0B2B;
+}
+.part2{
+    height: 3350px;
+    background-color: white;
+    z-index: 100;
+    position: relative;
+    /* border: 1px red solid; */
+}
+.part3{
+    height: 1900px;
+    background-color: #0E0B2B;
+    z-index: 10;
+    position: relative;
+}
+.part4{
+    height: 2480px;
+    background-color: white;
+    z-index: 10;
+    position: relative;
+    /* border: 1px red solid; */
+}
+footer{
+    height: 148px;
+    background-color: #0E0B2B;
+    z-index: 10;
+    position: relative;
+}
+/*----------------------- 调整导航区域的样式 ---------------------*/
+.logo{
+    display: inline-block;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 1000;
+}
+
+
+.horizontal-nav{
+    display: inline-block;
+    position: fixed;
+    right: 60px;
+    top: 60px;
+    z-index: 1000;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+.nav-item .active{
+    color:white;
+    font-weight: 900;
+    /* opacity: 1; */
+}
+.nav-link{
+    color:rgba(255, 255, 255, 0.598);
+    /* opacity: 0.6; */
+    font-size: 0.8rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+.nav-link:hover{
+    color:#3D06FF;
+}
+
+.vertical-nav{
+    position: fixed;
+    display: flex;
+    right: -500px;
+    top: 60px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.img-box{
+    background-color: rgb(101, 58, 255);
+    height: 1108px;
+    width: 716px;
+    /* border-radius: 20px; */
+    position: fixed;
+    right: 350px;
+    top: 160px;
+    /* z-index: -1; */
+}
+
+/* --------------------- 个人介绍部分样式 ---------------------- */
+.wrapper{
+    width: 1440px;
+    position: relative;
+    /* border: 1px solid red; */
+    left: 50%;
+    transform: translateX(-50%)
+}
+.symbol-mu{
+    position: absolute;
+    top: 40px;
+}
+.social-links{
+    position: absolute;
+    top: 220px;
+}
+.social-links h1{
+    font-family:din condensed;
+    font-size: 5rem;
+    line-height: 5rem;
+    color: rgba(173, 149, 149, 0.166);
+    word-spacing: 0.6rem;
+    letter-spacing: 0.2rem;
+}
+.all-links{
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 100;
+    position: relative;
+    top: -10px;
+}
+.all-links span{
+    margin-right: 10px;
+}
+.profile-text{
+    color: rgba(255, 255, 255, 0.85);
+    width: 900px;
+    position: absolute;
+    top: 400px;
+    font-weight: lighter;
+    font-size: 4.2rem;
+    /* -webkit-text-stroke: 0.5px #0E0B2B; */
+}
+.profile-text strong{
+    font-weight: 500;
+    text-decoration: line-through;
+    color: white;
+}
+
+/*---------- 中间文字 -----------*/
+.center-part{
+    position: absolute;
+    top: 1450px;
+    left: 160px;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: lighter;
+}
+.center-part h1:nth-of-type(1){
+    font-size: 3rem;
+    font-family: din condensed;
+    letter-spacing: 6px;
+    
+}
+.center-part p:nth-of-type(1){
+    letter-spacing: 2px;
+    /* color: #3D06FF; */
+    position: relative;
+    top: -10px;
+}
+.center-part h1:nth-of-type(2){
+    font-size: 8rem;
+    font-family: din condensed;
+    letter-spacing: 6px;
+    color: white;
+}
+.center-part p:nth-of-type(2){
+    position: absolute;
+    top: 160px;
+    left: 220px;
+    width: 400px;
+    /* word-wrap: none; */
+}
+.center-part p:nth-of-type(3){
+    position: absolute;
+    top: 186px;
+    left: 220px;
+    font-family: din condensed;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    /* width: 400px; */
+    /* word-wrap: none; */
+}
+.center-part p:nth-of-type(4){
+    position: absolute;
+    top: 232px;
+    left: 254px;
+    font-family: din condensed;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+}
+.center-part span{
+    position: absolute;
+    top: 230px;
+    left: 220px;
+}
+/* --------- 底部文字 -----------*/
+.bottom-part{
+    position: absolute;
+    top: 1800px;
+    left: 50%;
+    width: 1060px;
+    transform: translateX(-50%);
+}
+.bottom-part strong{
+    text-decoration: none;
+    color: #3D06FF;
+}
+.wrapper > h1{
+    -webkit-text-stroke:1px rgba(255, 255, 255, 0.2);
+    color: rgba(14, 11, 43, 0);
+    font-size: 6rem;
+    position: absolute;
+    font-family: din condensed;
+    letter-spacing: 20px;
+    left: 194px;
+    top: 2540px;
+}
+.add-icon{
+    position: absolute;
+    left: 625px;
+    top: 2540px;
+}
+.three-line{
+    position: absolute;
+    right: 0;
+    top: 1000px;
+    z-index: 100;
+}
+
+/* ------------------------ 作品展示部分样式 ------------------------ */
+.content-case{
+    width: 100%;
+    height: 100px;
+    /* background-color: #3D06FF; */
+}
+.case1{
+    position: absolute;
+    top: 200px;
+}
+.content-name p:nth-child(1){
+    font-family: din condensed;
+    font-size: 1.6rem;
+    color: #0E0B2B;
+    line-height: 1.6rem;
+}
+.content-name p:nth-child(2){
+    /* font-family: din condensed; */
+    font-size: 3rem;
+    font-weight: bolder;
+    line-height: 3rem;
+    color: #0E0B2B;
+}
+.content-name p:nth-child(3){
+    /* font-family: din condensed; */
+    font-size: 3rem;
+    color: #0E0B2B;
+    font-weight: lighter;
+    line-height: 3rem;
+}
+.content-name p:nth-child(4){
+    background-color: #3D06FF;
+    color: white;
+    display: inline-block;
+    font-family: din condensed;
+    letter-spacing: 2px;
+    line-height: 2.2em;
+    width: 70px;
+    height: 1.8rem;
+    /* vertical-align: bottom; */
+    text-align: center;
+    /* padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 9px; */
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.content-name p:nth-child(5){
+    /* background-color: #3D06FF; */
+    box-sizing: border-box;
+    border: #3D06FF 2px solid;
+    color: #3D06FF;
+    display: inline-block;
+    font-family: din condensed;
+    letter-spacing: 2px;
+    line-height: 2.1em;
+    width: 70px;
+    text-indent: 10px;
+    height: 1.8rem;
+    /* line-height: 1.5rem;
+    padding-top: 6px;
+    padding-left: 8px;
+    padding-right: 30px; */
+    position: absolute;
+    right: 0;
+    top: 36px;
+}
+/*----------------------- 作品滑动区间 ------------------------*/
+.slider-box{
+    height: 800px;
+    width: 100%;
+    /* background-color: #3D06FF; */
+}
+.carousel-indicators{
+    /* bottom: -40px; */
+}
+.carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(14, 11, 43, 0.2);
+    margin-left: 6px;
+    margin-right: 6px;
+    top: 60px;
+    
+}
+.carousel-indicators .active{
+    background-color: #3D06FF;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-image: none;
+    width: 8px;
+    height: 12px;
+
+}
+.carousel-control-prev-icon svg,.carousel-control-next-icon svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* bottom: 0; */
+}
+.carousel-control-prev{
+    height: 12px;
+    width: 8px;
+    left: 670px;
+    top: 824px;
+    opacity: 1;
+}
+.carousel-control-next{
+    height: 12px;
+    width: 8px;
+    right: 670px;
+    top: 824px;
+    opacity: 1;
+}
+/* ------------------------ 作品介绍文字部分 -----------------------*/
+.content-text{
+    width: 100%;
+    position: absolute;
+    top: 1050px;
+    
+}
+.content-text p{
+    line-height: 1rem;
+}
+.content-text p:nth-child(1),.content-text p:nth-child(3),.content-text p:nth-child(5){
+    font-weight: bolder;
+    opacity: 0.7;
+    
+}
+.content-text p:nth-child(2),.content-text p:nth-child(4),.content-text p:nth-child(6){
+    font-weight: lighter;
+    opacity: 0.7;
+    margin-bottom: 40px;
+    width: 350px;
+    line-height: 1.5rem;
+}
+.content-text p:nth-child(7){
+    position: absolute;
+    top: 0;
+    right: 100px;
+    width: 700px;
+    letter-spacing: 2px;
+    text-indent: 36px;
+    line-height: 2rem;
+    opacity: 0.9;
+    font-weight: lighter;
+}
+
+/* ------------------------ 其他作品区域样式 -----------------------*/
+.content-others{
+    position: absolute;
+    top: 1750px;
+    width: 100%;
+}
+.content-others p:nth-of-type(1){
+    font-size: 8rem;
+    font-family: din condensed;
+    -webkit-text-stroke: 2px #0E0B2B;
+    color: transparent;
+    letter-spacing: 4px;
+    position: absolute;
+    left: 500px;
+}
+.content-others p:nth-of-type(2){
+    font-size: 4rem;
+    font-family: din condensed;
+    -webkit-text-stroke: 2px #0E0B2B;
+    color: transparent;
+    letter-spacing: 4px;
+    position: absolute;
+    left: 100px;
+    top: 530px;
+}
+.content-others p:nth-of-type(3){
+    font-size: 4rem;
+    font-family: din condensed;
+    -webkit-text-stroke: 2px #0E0B2B;
+    color: transparent;
+    letter-spacing: 4px;
+    position: absolute;
+    right: 100px;
+    top: 400px;
+}
+.content-others p:nth-of-type(4){
+    font-size: 4rem;
+    font-family: din condensed;
+    /* -webkit-text-stroke: 2px #0E0B2B; */
+    color: #3D06FF;
+    letter-spacing: 4px;
+    position: absolute;
+    right: 500px;
+    top: 1200px;
+}
+.content-others svg{
+    position: absolute;
+    left: 830px;
+    top: 0;
+}
+.content-others div:nth-of-type(1){
+    height: 360px;
+    width: 530px;
+    position: absolute;
+    background-color: #3D06FF;
+    z-index: -1;
+    top: 160px;
+}
+.content-others div:nth-of-type(2){
+    height: 550px;
+    width: 820px;
+    position: absolute;
+    background-color: #3D06FF;
+    z-index: -1;
+    top: 100px;
+    right: 0;
+}
+.content-others div:nth-of-type(3){
+    height: 610px;
+    width: 940px;
+    position: absolute;
+    background-color: #0E0B2B;
+    z-index: -1;
+    top: 800px;
+    right: 200px;
+}
+/* --------------------- 文章分享版块样式 ---------------------- */
+.titles{
+    width: 1152px;
+    /* border: 1px solid red; */
+    /* height: 100px; */
+}
+/* 原创部分标题 */
+.bg-text{
+    width: 100%;
+    font-family: din condensed;
+    font-size: 20rem;
+    color: white;
+    opacity: 0.1;
+    line-height: 20rem;
+    word-spacing: 1rem;
+    letter-spacing: 20px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: -100px;
+    white-space: nowrap;
+}
+.origin-title{
+    position: absolute;
+    right: 0;
+    top: 100px;
+    z-index: 100;
+}
+.origin-title p:nth-of-type(1){
+    color: white;
+    font-family: din condensed;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    line-height: 2rem;
+    margin: 0;
+}
+.origin-title p:nth-of-type(2){
+    color: white;
+    /* font-family: din condensed; */
+    font-size: 1rem;
+    letter-spacing: 2px;
+    line-height: 1rem;
+    font-weight: lighter;
+    opacity: 0.5;
+    margin-top: 10px;
+}
+.origin-title span{
+    height: 8px;
+    width: 52px;
+    background-color: #3D06FF;
+    display: inline-block;
+    margin-left: -20px;
+}
+
+/* 翻译部分标题 */
+.trans-title{
+    position: absolute;
+    left: 0;
+    top: 860px;
+    z-index: 100;
+}
+.trans-title p:nth-of-type(1){
+    color: white;
+    font-family: din condensed;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    line-height: 2rem;
+    margin: 0;
+}
+.trans-title p:nth-of-type(2){
+    color: white;
+    /* font-family: din condensed; */
+    font-size: 1rem;
+    letter-spacing: 2px;
+    line-height: 1rem;
+    font-weight: lighter;
+    opacity: 0.5;
+    margin-top: 10px;
+}
+.trans-title span{
+    height: 8px;
+    width: 52px;
+    background-color: #3D06FF;
+    display: inline-block;
+    margin-left: -30px;
+}
+
+/* 原创文章卡片 */
+.wrapper .article-container{
+    width: 100%;
+    /* border: #3D06FF 1px solid; */
+    padding: 0;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    display: flex;
+    justify-content: space-around;
+    /* top: 100px; */
+    
+}
+.wrapper .article-container a:hover{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.article-box{
+    background-color: #3D06FF;
+    height: 198px;
+    width: 264px;
+    position: relative;
+}
+.article-box p:nth-last-of-type(1){
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    opacity: 0.5;
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
+.article-box p:nth-last-of-type(2){
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    opacity: 0.5;
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
+.line-2{
+    top:500px !important;
+}
+
+/* 翻译文章卡片 */
+.trans-container{
+    /* border: 1px red solid; */
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top:980px;
+}
+.trans-col{
+    display: flex;
+    justify-content: space-around;
+}
+.trans-box{
+    background-color: #3D06FF;
+    height: 198px;
+    width: 264px;
+    position: relative;
+}
+.trans-text{
+    position: absolute;
+    top: 210px;
+    width: 264px;
+}
+.trans-text p:nth-of-type(1){
+    font-size: 1.2rem;
+    font-weight: lighter;
+    line-height: 1.8rem;
+}
+.trans-text p:nth-of-type(2){
+    font-size: 1rem;
+    font-weight: lighter;
+    opacity: 0.5;
+    /* background-color: #3D06FF; */
+}
+.trans-text p:nth-of-type(3){
+    /* font-size: 1.2rem; */
+    font-weight: lighter;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    float: left;
+    margin-top: 15px;
+}
+.trans-text p:nth-of-type(4){
+    /* font-size: 1.2rem; */
+    font-weight: lighter;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    float: right;
+    /* vertical-align: bottom; */
+    margin-top: 15px;
+}
+.trans-col2{
+    position: relative;
+    top: 180px;
+}
+/* 最后一个more button */
+.more-button{
+    position: absolute;
+    top: 1830px;
+    right: 0;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: din condensed;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    /* opacity: 0.3; */
+}
+.more-button::after{
+    position: absolute;
+    left: 82px;
+    top: 4px;
+    content: "";
+    width: 8px;
+    height: 30px;
+    background-color: #3D06FF;
+}
+
+/* -------------------------- 教程部分 ---------------------------*/
+.video-part{
+    position: absolute;
+    width: 100%;
+    top: 200px;
+}
+.video-name p:nth-child(1){
+    /* font-family: din condensed; */
+    font-size: 3rem;
+    font-weight: bolder;
+    line-height: 3rem;
+    color: #0E0B2B;
+}
+.video-name ul{
+    padding: 0;
+}
+.video-name ul li{
+    list-style: none;
+    display: inline-block;
+}
+.video-name ul li:nth-child(odd){
+    font-weight: lighter;
+    opacity: 0.6;
+    margin-right: 20px;
+}
+
+.video-name ul li:nth-child(even){
+    font-family: din condensed;
+    /* font-weight: lighter; */
+    /* opacity: 0.6; */
+    margin-right: 50px;
+}
+
+/* 播放平台图标 */
+.tencent{
+    display: inline-block;
+    width: 20px;
+    height: 17px;
+    background-image: url("../img/tencent.png");
+    background-size: cover;
+    /* margin-right: 20px; */
+}
+.bili{
+    display: inline-block;
+    width: 53px;
+    height: 18px;
+    background-image: url("../img/bili.png");
+    background-size: cover;
+    /* margin-right: 20px; */
+}
+.youtube{
+    display: inline-block;
+    width: 22px;
+    height: 14px;
+    background-image: url("../img/youtube.png");
+    background-size: cover;
+    /* margin-bottom: 2px; */
+}
+.video-name ul li a{
+    /* list-style: none; */
+    display: inline-block;
+    margin-right: 30px;
+}
+.video-name p:nth-child(3){
+    /* font-family: din condensed; */
+    font-size: 3rem;
+    color: #0E0B2B;
+    font-weight: lighter;
+    line-height: 4rem;
+}
+.video-name p:nth-child(4){
+    background-color: #3D06FF;
+    color: white;
+    display: inline-block;
+    font-family: din condensed;
+    letter-spacing: 2px;
+    line-height: 2.2em;
+    width: 80px;
+    height: 1.8rem;
+    /* vertical-align: bottom; */
+    text-align: center;
+    /* padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 9px; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-indent: 2px;
+}
+.video-name p:nth-child(5){
+    /* background-color: #3D06FF; */
+    box-sizing: border-box;
+    border: #3D06FF 2px solid;
+    color: #3D06FF;
+    display: inline-block;
+    font-family: din condensed;
+    letter-spacing: 2px;
+    line-height: 2.1em;
+    width: 80px;
+    text-indent: 8px;
+    height: 1.8rem;
+    /* line-height: 1.5rem;
+    padding-top: 6px;
+    padding-left: 8px;
+    padding-right: 30px; */
+    position: absolute;
+    right: 0;
+    top: 36px;
+}
+.video-content,.video-area{
+    width: 100%;
+}
+
+/*------------------------- 目录部分样式 --------------------------------*/
+.menu-part{
+    position: absolute;
+    top: 1300px;
+    width: 100%;
+}
+.menu-container > p{
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+.menu-box,.menu-container{
+    width: 100%;
+    position: absolute;
+}
+.menu-box{
+    border-top: 1px lightgray solid;
+    display: block;
+    justify-content: flex-start;
+    
+}
+.menu-box > div,.menu-box > div{
+    margin-top: 20px;
+}
+.menu-box > div,.menu-box > div >p{
+    display: inline-block;
+}
+.menu-box > div >p:nth-child(1){
+    font-family: din condensed;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+.menu-box > div >p:nth-child(2){
+    /* font-family: din condensed; */
+    font-size: 1.2rem;
+    margin-left: 15px;
+    opacity: 0.8;
+}
+.menu-box > div >p:nth-child(3){
+    font-family: din condensed;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-left: 20px;
+    opacity: 0.5;
+}
+
+/*----------------------- 每个版块的位置 -----------------------*/
+.menu-part-two{
+    top: 200px;
+}
+.menu-part-three{
+    top: 500px;
+}
+.menu-part-four{
+    top: 1000px;
+}
+
+/*----------------- 每节课的位置 --------------------*/
+
+.menu-box > div:nth-child(1){
+    position: absolute;
+    left: 0;
+}
+.menu-box > div:nth-child(2){
+    position: absolute;
+    left: 540px;
+}
+.menu-box > div:nth-child(3){
+    position: absolute;
+    left: 1080px;
+}
+.menu-box > div:nth-child(4){
+    position: absolute;
+    left: 0;
+    top:100px;
+}
+.menu-box > div:nth-child(5){
+    position: absolute;
+    left: 540px;
+    top:100px;
+}
+.menu-box > div:nth-child(6){
+    position: absolute;
+    left: 1080px;
+    top:100px;
+}
+.menu-box > div:nth-child(7){
+    position: absolute;
+    left: 0;
+    top:200px;
+}
+.menu-box > div:nth-child(8){
+    position: absolute;
+    left: 540px;
+    top:200px;
+}
+.menu-box > div:nth-child(9){
+    position: absolute;
+    left: 1080px;
+    top:200px;
+}
+.menu-box > div:nth-child(10){
+    position: absolute;
+    left: 0;
+    top:300px;
+}
+.menu-box > div:nth-child(11){
+    position: absolute;
+    left: 540px;
+    top:300px;
+}
+
+/*----------------- 选中之后的效果 ------------------*/
+
+.menu-box >.item-selected > p:nth-child(1){
+    font-size: 3.5rem;
+    color: #3D06FF;
+    line-height: 3.5rem;
+    top: 5px;
+    position: absolute;
+    /* float: left; */
+}
+.menu-box >.item-selected > p:nth-child(2){
+    position: absolute;
+    left: 50px;
+    width: 500px;
+    font-weight: bolder;
+  
+}
+.menu-box >.item-selected > p:nth-child(3){
+    position: absolute;
+    left: 50px;
+    top: 28px;
+    width: 500px;
+    margin-left: 15px;
+    color: #3D06FF;
+    opacity: 1;
+}
+
+/* -------------- 尾部样式 ---------------- */
+
+/* --------- 左边的 --------- */
+footer .wrapper{
+    height: 100%;
+}
+footer a:nth-child(1) svg{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+footer .wrapper > svg{
+    position: absolute;
+    top:50%;
+    left: 100px;
+    transform: translateY(-50%);
+}
+footer a:nth-child(3) svg{
+    position: absolute;
+    top:50%;
+    left: 140px;
+    transform: translateY(-50%);
+}
+footer a:nth-child(4) svg{
+    position: absolute;
+    top:50%;
+    left: 200px;
+    transform: translateY(-50%);
+}
+footer a:nth-child(5) svg{
+    position: absolute;
+    top:50%;
+    left: 310px;
+    transform: translateY(-50%);
+}
+footer a:nth-child(6) svg{
+    position: absolute;
+    top:50%;
+    left: 360px;
+    transform: translateY(-50%);
+}
+/* ------------ 右边的 -------------- */
+.qr-code{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top:58%;
+    right: 100px;
+    transform: translateY(-50%);
+    background-color: #3D06FF;
+}
+.phone-num{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top:56%;
+    right: 00px;
+    transform: translateY(-50%);
+    color: white;
+    font-family: din condensed;
+    letter-spacing: 12px;
+    line-height: 1.5rem;
+}
+.small-line{
+    width: 8px;
+    height: 4px;
+    background-color: #3D06FF;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    
+}
+.wechat-text{
+    color: white;
+    font-family: din condensed;
+    letter-spacing: 2px;
+    opacity: 0.3;
+    position: absolute;
+    right: 104px;
+    top: 28px;
+}
+.phone-text{
+    color: white;
+    font-family: din condensed;
+    letter-spacing: 2px;
+    opacity: 0.3;
+    position: absolute;
+    right: 8px;
+    top: 28px;
+}
+
+
+
+
+/*--------------------------- 动效用css -------------------------*/
+
+/* logo颜色变化 */
+
+.black  path{
+    fill: #0E0B2B;
+}
+.black circle{
+    stroke: #0E0B2B;
+}
+
+.disappear{
+    opacity: 0;
+    right: -600px;
+}
+.show{
+    right: 20px;
+    opacity: 1;
+}
