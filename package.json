@@ -1,0 +1,30 @@
+{
+  "name": "muwebcode",
+  "version": "1.0.0",
+  "description": "个人网站 我来修改一下",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yinglinhan/personalWeb.git"
+  },
+  "author": "yinglinhan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yinglinhan/personalWeb/issues"
+  },
+  "homepage": "https://github.com/Yinglinhan/personalWeb#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "css-loader": "^1.0.0",
+    "less": "^3.8.0",
+    "less-loader": "^4.1.0",
+    "postcss-loader": "^2.1.6",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.5"
+  }
+}
