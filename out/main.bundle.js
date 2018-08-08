@@ -148,18 +148,7 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!../
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ../css/mobile.less */ \"./src/css/mobile.less\");\n// require('../js/jquery-3.3.1.js');\nvar test = __webpack_require__(/*! ../js/test.js */ \"./src/js/test.js\");\n// (function a(){\n//     console.log(111)\n// })()\ntest.test(111);\nconsole.log($);\n\n//# sourceURL=webpack:///./src/js/index.js?");
-
-/***/ }),
-
-/***/ "./src/js/test.js":
-/*!************************!*\
-  !*** ./src/js/test.js ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = {\n    test: function (str) {\n        console.log(str);\n    }\n};\n\n//# sourceURL=webpack:///./src/js/test.js?");
+eval("__webpack_require__(/*! ../css/mobile.less */ \"./src/css/mobile.less\");\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ })
 
