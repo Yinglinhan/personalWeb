@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"* {\\n  background-image: url('http://p2xzgvk13.bkt.clouddn.com/2018-05-02-1.jpg');\\n}\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/css/mobile.less?./node_modules/css-loader!./node_modules/less-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"* {\\n  margin: 0;\\n  padding: 0;\\n  list-style: none;\\n  text-decoration: none;\\n}\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/css/mobile.less?./node_modules/css-loader!./node_modules/less-loader/dist/cjs.js");
 
 /***/ }),
 
