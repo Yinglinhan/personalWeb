@@ -5,3 +5,9 @@
     font-style: normal;
 }
 /* @import url('https://fonts.googleapis.com/css?family=Hanalei+Fill'); */
+@font-face {
+    font-family:'Ultrathin';
+    src: url('http://p2xzgvk13.bkt.clouddn.com/Ultrathin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

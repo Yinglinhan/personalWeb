@@ -5,7 +5,7 @@ module.exports ={
     output:{
         path:__dirname + '/out',
         filename:'[name].bundle.js',
-        publicPath:'http://localhost:8080/out/'
+        publicPath:'http://localhost:8081/out/'
     },
     mode:'development',
     module:{
