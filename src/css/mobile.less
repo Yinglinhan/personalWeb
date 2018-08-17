@@ -252,12 +252,13 @@ header{
         position: relative;
         width: 90%;
         margin: 0 auto;
-        margin-bottom: 4rem;
+        // margin-bottom: 4rem;
         // height: 1000px;
         // border: 1px red solid;
         .project{
             // width: 100%;
             margin-top: 3rem;
+            margin-bottom: 6rem;
             .title{
                 // border: 1px solid red;
                 position: relative;
@@ -299,12 +300,25 @@ header{
                 }
                 
             }
-            .swipe{
+            .lunbotu{
                 margin-top: 0.3rem;
                 width: 100%;
-                .photo-box{
-                    width: 100%;
+                .swipe-box{
+                    overflow: hidden;
+                    position: relative;
+                }
+                .pic-container{
                     font-size: 0;
+                    position: relative;
+                    left: 0;
+                    // width: 1000px;
+                }
+                .photo-box{
+                    // float: left;
+                    width: 100%;
+                    display: inline-block;
+                    font-size: 0;
+                   
                     img{
                         width: 100%;
                     }
