@@ -1,12 +1,35 @@
 // require('../css/font.css');
 require('../css/mobile.less');
-var u = navigator.userAgent;
-var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+// var u = navigator.userAgent;
+// var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+// var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+var swipeBox = $('.swipe-box'),
+    photoBox = $('.photo-box'),
+    photoContainer = $('.pic-container'),
+    boxWidth = swipeBox.width(),
+    childNumArr = [];
+ 
+    //确定每个项目图片的数量
+    photoContainer.forEach(function(ele,index){
+        childNumArr.push($(ele).children().length)
+    })
+    //把当前轮播图宽度设定到每张作品图片上
+    photoBox.width(boxWidth);
+
+    //设置作品图片的外部盒子的宽度
+    photoContainer.forEach(function(ele,index){
+        $(ele).width(boxWidth*childNumArr[index])
+    })
+
+
+
+
 var part1Height = $('.part1').height(),
     part2Height = $('.part2').height(),
     part3Height = $('.part3').height(),
     part4Height = $('.part4').height();
+
 var oDoc = $(document);
 var scroLen;
 // console.log(part1Height)
@@ -15,8 +38,9 @@ var navBar = $(".horizontal-nav a")
 init()
 
 function init() {
+
     bindEvent();
-    
+    swipePic();
     // initiAnimation()
 }
 
@@ -24,12 +48,13 @@ function init() {
 function bindEvent() {
     oDoc.on('scroll', function () {
         scroLen = $(window).scrollTop();
-        // console.log(scroLen);
+        console.log(scroLen);
         // console.log(part1Height+part2Height+part3Height)
         // if (isAndroid){
            
         // }
         changeNav(part1Height, part2Height, part3Height,200);
+        // console.log(scroLen)
         // else if (scroLen > 1000) {
         //     $(navBar[1]).html('123')
         // }
@@ -37,7 +62,7 @@ function bindEvent() {
     
     navBar.on('tap', function(e) {
         e.preventDefault();
-        changgeNavColor(this)
+        // changgeNavColor(this)
         smoothScroll($(window), $($(e.currentTarget).attr('go')).offset().top, 200);
     });
         
@@ -45,20 +70,41 @@ function bindEvent() {
     
 }
 
-function changeNav(p1, p2, p3,num) {
-    if (scroLen <= p1 - num) {
+function changeNav(p1, p2, p3,number) {
+    // console.log(scroLen)
+    // console.log(p1)
+    // console.log(p2)
+    // console.log(p3)
+    if (scroLen <= p1 - number) {
         changgeNavColor(navBar[0]);
     } 
-    else if ((scroLen > p1 - num) && (scroLen <= p1 + p2 - num)){
+    else if ((scroLen > p1 - number) && (scroLen <= p1 + p2 - number)){
         changgeNavColor(navBar[1])
-    }else if (scroLen > (p1 + p2 - num) && (scroLen <= p1 + p2 + + p3 - num)) {
+        
+        // console.log(p1 + p2 - number)
+        // console.log()
+
+    }
+    else if (scroLen > (p1 + p2 - number) && (scroLen <= p1 + p2 + p3 - number)) {
         changgeNavColor(navBar[2])
+        // console.log(3)
     }
     else{
         changgeNavColor(navBar[3])
     }
-    if ((scroLen > p1 - num) && (scroLen <= p1 + p2 - num)){
-        changgeNavColor(navBar[1])}
+    // if (scroLen <= p1 - number) {
+    //     changgeNavColor(navBar[0]);
+    // } else if ((scroLen > p1 - number) && (scroLen <= p1 + p2 - number)){
+    //     changgeNavColor(navBar[1])
+    //     console.log(2)
+    // }else if (scroLen > (p1 + p2 - number) && (scroLen <= p1 + p2 + + p3 - number)) {
+    //     changgeNavColor(navBar[2])
+    // }
+    // else{
+    //     changgeNavColor(navBar[3])
+    // }
+    // if ((scroLen > p1 - num) && (scroLen <= p1 + p2 - num)){
+    //     changgeNavColor(navBar[1])}
 }
 
 
@@ -98,6 +144,8 @@ function swipePic(){
         dotsBox = $('.dots'),
         initialNumArr = [],
         num = photoContainer.length;//取得有几个轮播图
+
+       
 
 
     //确定每个项目图片的数量
@@ -197,7 +245,7 @@ function swipePic(){
         })
     
 }
-swipePic()
+
 
 function changdot(dots,num,allNum){
     // console.log(num);
