@@ -5,19 +5,6 @@
 @din:'abcdefg';
 
 
-
-
-
-
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    color: #FFF;
-
-    // width: 100%;
-}
 body{
     background-color: @bgbalck;
 }
@@ -48,8 +35,17 @@ header{
             .active{
                 color: #FFF;
             }
-            
-            
+            li:nth-of-type(3){
+                // display: none;
+                // width: 0%;
+            }
+        }
+        
+        svg{
+            margin-top: 50px;
+            // width: 0%;
+            width: 0;
+            opacity: 0;
         }
     }
 }
@@ -101,24 +97,27 @@ header{
                 position: absolute;
                 width: 100%;
                 height: 100%;
+                svg{
+                    transition: all 1s;
+                }
                 svg:nth-child(1){
                     position: absolute;
-                    left: 0;
+                    left: -40px;
                     top: 0;
                 }
                 svg:nth-child(2){
                     position: absolute;
-                    left: 0;
+                    left: -40px;
                     bottom: 0;
                 }
                 svg:nth-child(3){
                     position: absolute;
-                    right: 0;
+                    right: -40px;
                     bottom: 0;
                 }
                 svg:nth-child(4){
                     position: absolute;
-                    right: 0;
+                    right: -40px;
                     top: 0;
                 }
                 svg:nth-child(5){
@@ -129,6 +128,7 @@ header{
                     left: 0;
                     margin: auto;
                 }
+                
 
              }
          }

@@ -5,9 +5,52 @@
     font-style: normal;
 }
 /* @import url('https://fonts.googleapis.com/css?family=Hanalei+Fill'); */
-@font-face {
+/* @font-face {
     font-family:'Ultrathin';
     src: url('http://p2xzgvk13.bkt.clouddn.com/Ultrathin.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+} */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #FFF;
+
+    /* // width: 100%; */
+}
+.mask-layer div{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* border: 1px red solid; */
+}
+.mask-layer svg,.mask-layer span{
+    
+    /* transform: translateY(-50%); */
+    animation: op 1.8s infinite ease-in-out;
+    display: block;
+}
+
+.mask-layer span{
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    font-family: 'abcdefg';
+    top: 49%;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+@keyframes op{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
 }

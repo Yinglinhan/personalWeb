@@ -26,7 +26,7 @@ a:hover{
     background-color: #0E0B2B;
 }
 .part2{
-    height: 3350px;
+    height: 11550px;
     background-color: white;
     z-index: 100;
     position: relative;
@@ -97,8 +97,8 @@ footer{
 }
 
 .img-box{
-    background-color: rgb(101, 58, 255);
-    height: 1108px;
+    /* background-color: rgb(101, 58, 255); */
+    /* height: 1108px; */
     width: 716px;
     /* border-radius: 20px; */
     position: fixed;
@@ -106,7 +106,10 @@ footer{
     top: 160px;
     /* z-index: -1; */
 }
-
+.img-box img{
+    width: 100%;
+    opacity: 0.3;
+}
 /* --------------------- 个人介绍部分样式 ---------------------- */
 .wrapper{
     width: 1440px;
@@ -258,6 +261,22 @@ footer{
     position: absolute;
     top: 200px;
 }
+.case2{
+    position: absolute;
+    top: 1800px;
+}
+.case3{
+    position: absolute;
+    top: 3400px;
+}
+.case4{
+    position: absolute;
+    top: 5000px;
+}
+.case5{
+    position: absolute;
+    top: 6600px;
+}
 .content-name p:nth-child(1){
     font-family: din condensed;
     font-size: 1.6rem;
@@ -353,16 +372,22 @@ footer{
 .carousel-control-prev{
     height: 12px;
     width: 8px;
-    left: 670px;
+    left: 640px;
     top: 824px;
     opacity: 1;
 }
 .carousel-control-next{
     height: 12px;
     width: 8px;
-    right: 670px;
+    right: 640px;
     top: 824px;
     opacity: 1;
+}
+.case5 .carousel-control-prev{
+    left: 620px;
+}
+.case5 .carousel-control-next{
+    right: 620px;
 }
 /* ------------------------ 作品介绍文字部分 -----------------------*/
 .content-text{
@@ -401,8 +426,9 @@ footer{
 /* ------------------------ 其他作品区域样式 -----------------------*/
 .content-others{
     position: absolute;
-    top: 1750px;
+    top: 8150px;
     width: 100%;
+    /* border: 1px solid red; */
 }
 .content-others p:nth-of-type(1){
     font-size: 8rem;
@@ -414,34 +440,44 @@ footer{
     left: 500px;
 }
 .content-others p:nth-of-type(2){
-    font-size: 4rem;
+    font-size: 6rem;
     font-family: din condensed;
     -webkit-text-stroke: 2px #0E0B2B;
     color: transparent;
     letter-spacing: 4px;
     position: absolute;
-    left: 100px;
-    top: 530px;
+    right: 60px;
+    top: 780px;
 }
 .content-others p:nth-of-type(3){
     font-size: 4rem;
     font-family: din condensed;
-    -webkit-text-stroke: 2px #0E0B2B;
-    color: transparent;
+    /* -webkit-text-stroke: 2px #0E0B2B; */
+    color: #0E0B2B;
     letter-spacing: 4px;
     position: absolute;
-    right: 100px;
+    left: 0;
     top: 400px;
 }
 .content-others p:nth-of-type(4){
     font-size: 4rem;
     font-family: din condensed;
     /* -webkit-text-stroke: 2px #0E0B2B; */
-    color: #3D06FF;
+    color: #0E0B2B;
     letter-spacing: 4px;
     position: absolute;
-    right: 500px;
-    top: 1200px;
+    right: 580px;
+    top: 1700px;
+}
+.content-others p:nth-of-type(5){
+    font-size: 6rem;
+    font-family: din condensed;
+    -webkit-text-stroke: 2px #0E0B2B;
+    color: transparent;
+    letter-spacing: 4px;
+    position: absolute;
+    left: 166px;
+    top: 2450px;
 }
 .content-others svg{
     position: absolute;
@@ -449,30 +485,43 @@ footer{
     top: 0;
 }
 .content-others div:nth-of-type(1){
-    height: 360px;
-    width: 530px;
+    height: 70%;
+    /* width: 530px; */
     position: absolute;
     background-color: #3D06FF;
     z-index: -1;
-    top: 160px;
+    top: 325px;
+    left: 250px;
+}
+.content-others div img{
+    width: 100%;
 }
 .content-others div:nth-of-type(2){
-    height: 550px;
-    width: 820px;
+    /* height: 550px; */
+    width: 90%;
     position: absolute;
     background-color: #3D06FF;
     z-index: -1;
-    top: 100px;
-    right: 0;
+    top: 800px;
+    left: 0;
 }
 .content-others div:nth-of-type(3){
-    height: 610px;
-    width: 940px;
+    /* height: 610px; */
+    width: 50%;
     position: absolute;
     background-color: #0E0B2B;
     z-index: -1;
-    top: 800px;
-    right: 200px;
+    top: 1780px;
+    right: 310px;
+}
+.content-others div:nth-of-type(4){
+    /* height: 610px; */
+    width: 90%;
+    position: absolute;
+    background-color: #0E0B2B;
+    z-index: -1;
+    top: 2580px;
+    right: 5%;
 }
 /* --------------------- 文章分享版块样式 ---------------------- */
 .titles{
@@ -588,6 +637,9 @@ footer{
     width: 264px;
     position: relative;
 }
+.article-box img{
+    width: 100%;
+}
 .article-box p:nth-last-of-type(1){
     position: absolute;
     bottom: -50px;
@@ -625,6 +677,9 @@ footer{
     height: 198px;
     width: 264px;
     position: relative;
+}
+.trans-box img{
+    width: 100%;
 }
 .trans-text{
     position: absolute;
@@ -934,6 +989,14 @@ footer{
     color: #3D06FF;
     opacity: 1;
 }
+
+/* -------------- 目录点击 ---------------- */
+.menu-box > div:hover{
+    cursor: pointer;
+}
+
+
+
 
 /* -------------- 尾部样式 ---------------- */
 

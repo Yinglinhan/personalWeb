@@ -23,8 +23,6 @@ var swipeBox = $('.swipe-box'),
     })
 
 
-
-
 var part1Height = $('.part1').height(),
     part2Height = $('.part2').height(),
     part3Height = $('.part3').height(),
@@ -35,29 +33,66 @@ var scroLen;
 // console.log(part1Height)
 var navBar = $(".horizontal-nav a")
 // console.log(navBar)
+var navLogo = $('.nav svg');
+
+$('body').css('overflow', 'hidden');
+
+// window.onload = function (){
+//     init();
+//     $('.mask-layer').animate({'opacity':'0'},600,'ease',function(){
+//         $('.mask-layer').css('display','none')
+//     });
+//     $('body').css('overflow', 'auto');
+// }
+
+
 init()
+setTimeout(function(){
+        $('.mask-layer').animate({'opacity':'0'},600,'ease',function(){
+        $('.mask-layer').css('display','none')
+    });
+    $('body').css('overflow', 'auto');
+    test()
+},3000)
 
 function init() {
 
     bindEvent();
     swipePic();
     // initiAnimation()
+    // aniStart()
+    
+}
+function test(){
+    $('.logo-area .content svg:nth-of-type(1)').css('left','0px');
+    $('.logo-area .content svg:nth-of-type(2)').css('left','0px');
+    $('.logo-area .content svg:nth-of-type(3)').css('right','0px');
+    $('.logo-area .content svg:nth-of-type(4)').css('right','0px');
 }
 
+// 导航中的logo出现和消失效果
+function allAnimation(){
+    if(scroLen >250){
+        navLogo.animate({
+            'margin-top':'4px','width':'35px','opacity':'1'
+        },300)
+    }else{
+        navLogo.animate({
+            'margin-top':'50','width':'0','opacity':'1'
+        },300)
+    }
+
+
+
+
+}
 
 function bindEvent() {
     oDoc.on('scroll', function () {
         scroLen = $(window).scrollTop();
-        console.log(scroLen);
-        // console.log(part1Height+part2Height+part3Height)
-        // if (isAndroid){
-           
-        // }
+       console.log(scroLen);
         changeNav(part1Height, part2Height, part3Height,200);
-        // console.log(scroLen)
-        // else if (scroLen > 1000) {
-        //     $(navBar[1]).html('123')
-        // }
+        allAnimation()
     });
     
     navBar.on('tap', function(e) {
@@ -71,10 +106,7 @@ function bindEvent() {
 }
 
 function changeNav(p1, p2, p3,number) {
-    // console.log(scroLen)
-    // console.log(p1)
-    // console.log(p2)
-    // console.log(p3)
+    
     if (scroLen <= p1 - number) {
         changgeNavColor(navBar[0]);
     } 
@@ -92,19 +124,7 @@ function changeNav(p1, p2, p3,number) {
     else{
         changgeNavColor(navBar[3])
     }
-    // if (scroLen <= p1 - number) {
-    //     changgeNavColor(navBar[0]);
-    // } else if ((scroLen > p1 - number) && (scroLen <= p1 + p2 - number)){
-    //     changgeNavColor(navBar[1])
-    //     console.log(2)
-    // }else if (scroLen > (p1 + p2 - number) && (scroLen <= p1 + p2 + + p3 - number)) {
-    //     changgeNavColor(navBar[2])
-    // }
-    // else{
-    //     changgeNavColor(navBar[3])
-    // }
-    // if ((scroLen > p1 - num) && (scroLen <= p1 + p2 - num)){
-    //     changgeNavColor(navBar[1])}
+   
 }
 
 
@@ -133,7 +153,7 @@ function changgeNavColor(item) {
 }
 
 
-
+//轮播图的方法
 function swipePic(){
     var swipeBox = $('.swipe-box'),
         photoBox = $('.photo-box'),
@@ -246,7 +266,7 @@ function swipePic(){
     
 }
 
-
+//改变小圆点的方法
 function changdot(dots,num,allNum){
     // console.log(num);
     // var active = $(dots).find('.active');
