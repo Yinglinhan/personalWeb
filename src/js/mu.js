@@ -17,13 +17,14 @@ var menuBox = $('.menu-box > div');
 $('body').css('overflow', 'hidden');
 
 setDefaultAnimation();
-
-window.onload = function () {
-    init();
+init();
+setTimeout(function () {
+    
     $('.mask-layer').fadeOut();
     $('body').css('overflow', 'auto');
-}
+    initiAnimation()
 
+},3000) 
 
 
 
@@ -32,8 +33,6 @@ window.onload = function () {
 
 function init() {
     bindEvent();
-    
-    initiAnimation()
 }
 
 
@@ -48,11 +47,19 @@ function setDefaultAnimation() {
 }
 function initiAnimation() {
     $('.logo').animate({ 'top': '40px', 'opacity': 1 }, 500, 'swing');
-    $('.three-line').delay(500).animate({ 'right': '0px', 'opacity': 1 }, 500, 'swing');
+    // $('.three-line').delay(500).animate({ 'right': '0px', 'opacity': 1 }, 500, 'swing');
     $('.symbol-mu').animate({ 'left': '0px', 'opacity': 1 }, 500, 'swing');
-    $('.img-box').animate({ 'right': '350px', 'opacity': 1 }, 500, 'swing');
+    if(document.body.offsetWidth > 1440){
+        $('.img-box').animate({ 'right': '350px', 'opacity': 1 }, 500, 'swing');
+        $('.three-line').delay(500).animate({ 'right': '0px', 'opacity': 1 }, 500, 'swing');
+    }else{
+        $('.img-box').animate({ 'right': '200px', 'opacity': 1 }, 500, 'swing');
+        $('.three-line').delay(500).animate({ 'right': '-100px', 'opacity': 1 }, 500, 'swing');
+    }
+    
     $('.social-links').animate({'left':'0px','opacity': 1},500);
     $('.top-part').animate({'left':'0px','opacity': 1},500);
+    
 }
 
 function bindEvent() {

@@ -230,13 +230,13 @@ header{
                     font-family: @din;
                     position: relative;
                     font-size: 2rem;
-                    top: 1rem;
+                    top: 3rem;
                     left: -2rem;
                     letter-spacing: 0.2rem;
                     word-wrap: none;
                     white-space: nowrap;
                     color: transparent;
-                    -webkit-text-stroke:0.01rem gray;
+                    -webkit-text-stroke:0.01rem rgb(255, 255, 255);
                     opacity: 0.5;
                 }
             }
@@ -270,7 +270,7 @@ header{
                 h3{
                     font-family: @din;
                     font-size: 0.8rem;
-                    opacity: 0.2;
+                    opacity: 0.9;
                 }
                 h1{
                     font-family: @defaultFont;
@@ -294,10 +294,11 @@ header{
                     right: 0;
                     top: 0;
                     font-size: 0;
-                    background-image: url("../img/tag.jpg");
+                    background-image: url("http://pdpgbekst.bkt.clouddn.com/tag-online.jpg");
                     background-size: cover;
                     background-repeat: none;
                 }
+
                 
             }
             .lunbotu{
@@ -359,10 +360,10 @@ header{
                 }
                 h3{
                     font-family: @defaultFont;
-                    font-size: 0.9rem;
-                    font-weight: 400;
+                    font-size: 1rem;
+                    font-weight: 800;
                     letter-spacing: 1px;
-                    opacity: 0.4;
+                    opacity: 1;
                     // font-style: italic;
                 }
                 h3:nth-of-type(2){
@@ -373,8 +374,8 @@ header{
                     font-family: @defaultFont;
                     // font-size: 0.8rem;
                     font-weight: 400;
-                    line-height: 1.6;
-                    font-size: 0.9rem;
+                    line-height: 2;
+                    font-size: 1rem;
                     margin-top: 2rem;
                     opacity: 0.9;
                     &::before{
@@ -389,6 +390,57 @@ header{
                     }
                 }
                 
+            }
+        }
+        .project:nth-of-type(3),.project:nth-of-type(4){
+            .tag{
+                width: 29px;
+                height: 26px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 0;
+                background-image: url("http://pdpgbekst.bkt.clouddn.com/tag-con.jpg");
+                background-size: cover;
+                background-repeat: none;
+            }
+        }
+        .project:nth-of-type(5){
+            .tag{
+                width: 34px;
+                height: 26px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 0;
+                background-image: url("http://pdpgbekst.bkt.clouddn.com/tag-re.jpg");
+                background-size: cover;
+                background-repeat: none;
+            }
+        }
+        .other-project{
+            span{
+                font-size: 4rem;
+                font-family: @din;
+                -webkit-text-stroke: 1px #0E0B2B;
+                color: transparent;
+                letter-spacing: 4px;
+                // position: absolute;
+                // left: 500px;
+            }
+            svg{
+                position: relative;
+                top: -2rem;
+            }
+            div{
+                width: 100%;
+                margin-top: 4rem;
+                img{
+                    width: 100%;
+                }
+            }
+            div:last-of-type{
+                margin-bottom: 6rem;
             }
         }
     }
@@ -547,7 +599,7 @@ header{
         }
         .more-button{
             // width: 100%;p
-            margin-top: 2rem;
+            margin-top: 6rem;
             font-size: 0;
             span{
                 opacity: 0.5;
