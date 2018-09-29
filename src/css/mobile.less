@@ -1,0 +1,788 @@
+//初始设置
+@mublue : #3D06FF;
+@bgbalck:#0E0B2B;
+@defaultFont:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+@din:'abcdefg';
+
+
+body{
+    background-color: @bgbalck;
+}
+//开始header部分样式
+
+header{
+   
+    nav{
+        z-index: 1000;
+        position: fixed;
+        background-color: @bgbalck;
+        width: 100%;
+        height: 50px;
+        bottom: 0;
+        border-top: 1px rgb(43, 40, 52) solid;
+        & .nav{
+            display: flex;
+            margin-top: 2px;
+            justify-content: space-around;
+            a{
+                font-family:@din;
+                display: inline-block;
+                line-height: 50px;
+                font-size: 1rem;
+                letter-spacing: 0.1rem;
+                color: #fff * 0.6;
+            }
+            .active{
+                color: #FFF;
+            }
+            li:nth-of-type(3){
+                // display: none;
+                // width: 0%;
+            }
+        }
+        
+        svg{
+            margin-top: 50px;
+            // width: 0%;
+            width: 0;
+            opacity: 0;
+        }
+    }
+}
+
+//第一部分
+
+.part1{
+    background-color: @bgbalck;
+    width: 100%;
+    overflow: hidden;
+    // position: relative;
+    
+     // position: absolute;
+    //  width: 100%;
+    //  height: 100%;
+    //  background-color: @bgbalck;
+     // top: 0;
+     .img-box{
+         width: 100%;
+         position: absolute;
+         // z-index: 1;
+         // height: 20%;
+         background-color: @bgbalck;
+         img{
+             width: 100%;
+         }
+     }
+     .wrapper{
+         position: relative;
+         width: 90%;
+         margin: 0 auto;
+         margin-top: 5%;
+        //  border: 1px red solid;
+        //  left: 50%;
+        //  transform: translateX(-50%);
+         .logo-area{
+            position: relative;
+            width: 100%;
+            // border: 5px solid red;
+            
+            box-sizing: border-box;
+            //  border: 1px red solid;
+             &::after{
+                 content: "";
+                 display: block;
+                 padding-bottom: 100%;
+             }
+             .content{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                svg{
+                    transition: all 1s;
+                }
+                svg:nth-child(1){
+                    position: absolute;
+                    left: -40px;
+                    top: 0;
+                }
+                svg:nth-child(2){
+                    position: absolute;
+                    left: -40px;
+                    bottom: 0;
+                }
+                svg:nth-child(3){
+                    position: absolute;
+                    right: -40px;
+                    bottom: 0;
+                }
+                svg:nth-child(4){
+                    position: absolute;
+                    right: -40px;
+                    top: 0;
+                }
+                svg:nth-child(5){
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                }
+                
+
+             }
+         }
+         .profile{
+            //  background-color: #3D06FF;
+            // border: 1px red solid;
+             width: 100%;
+            //  height: 1000px;
+             
+             //第一大段文字
+            .profile-text{
+                font-family: @defaultFont;
+                margin-top: 3rem;
+                line-height: 1.6;
+                font-size: 1.1rem;
+                font-weight: bolder;
+                em{
+                    font-family: 'Ultrathin';
+                    // font-weight: 100;
+                    // font-family: PingFangSC-Ultralight;
+                    font-weight: lighter;
+                    font-style: normal;
+                    text-decoration:line-through;
+                    // font-size: 1.5rem;
+                }
+            }
+
+            //第二部分关于时间
+            div:nth-of-type(1){
+                margin-top: 4rem;
+                h1:nth-of-type(1){
+                    font-family: @din;
+                    font-size: 1.8rem;
+                    letter-spacing: 0.2rem;
+                    opacity: 0.3;
+                }
+                h2{
+                    font-family: @defaultFont;
+                    font-size: 0.88rem;
+                    font-weight: lighter;
+                    opacity: 0.3;
+                    line-height: 1.6;
+                }
+                h1:nth-of-type(2){
+                    font-family: @din;
+                    font-size: 96px;
+                    letter-spacing: 8px;
+                    margin-top: 16px;
+                    // width: 240px;
+                    display: inline-block;
+                    position: relative;
+                    // border: 1px solid red;
+                    vertical-align: baseline;
+                    span{
+                        font-size: 38px;
+                        letter-spacing: 2px;
+                        position: absolute;
+                        right: -140px;
+                        top: 4px;
+                        word-wrap: none;
+                        white-space: nowrap;
+                    }
+                    svg{
+                        position: absolute;
+                        right: -40px;
+                        top: 48px;
+                    }
+                    span:nth-of-type(2){
+                        top: 58px;
+                        right: -100px;
+                        font-size: 20px;
+                    }
+                }
+                p{
+                    font-family: @defaultFont;
+                    font-size: 0.88rem;
+                    font-weight: lighter;
+                    opacity: 0.3;
+                    line-height: 1.6;
+                    position: relative;
+                    top: -30px;
+                    // border: 1px red solid;
+                }
+            }
+
+            //最后一段文字部分
+            div:nth-of-type(2){
+                font-family: @defaultFont;
+                // margin-top: 3rem;
+                line-height: 1.6;
+                padding-left: 3rem;
+                font-size: 1.1rem;
+                font-weight: bolder;
+                margin-bottom: 6rem;
+                strong{
+                    color: @mublue;
+                }
+                h1{
+                    font-family: @din;
+                    position: relative;
+                    font-size: 2rem;
+                    top: 3rem;
+                    left: -2rem;
+                    letter-spacing: 0.2rem;
+                    word-wrap: none;
+                    white-space: nowrap;
+                    color: transparent;
+                    -webkit-text-stroke:0.01rem rgb(255, 255, 255);
+                    opacity: 0.5;
+                }
+            }
+         }
+     }
+}
+.part2{
+    width: 100%;
+    background-color: #FFF;
+    overflow: hidden;
+    .wrapper{
+        box-sizing: border-box;
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        // margin-bottom: 4rem;
+        // height: 1000px;
+        // border: 1px red solid;
+        .project{
+            // width: 100%;
+            margin-top: 3rem;
+            margin-bottom: 6rem;
+            .title{
+                // border: 1px solid red;
+                position: relative;
+                width: 100%;
+                h1,h2,h3{
+                    color: @bgbalck;
+                    
+                }
+                h3{
+                    font-family: @din;
+                    font-size: 0.8rem;
+                    opacity: 0.9;
+                }
+                h1{
+                    font-family: @defaultFont;
+                    font-weight: bolder;
+                    font-size: 1.1rem;
+                    opacity: 0.9;
+                    // margin-top: 1rem;
+                }
+                h2{
+                    font-family: @defaultFont;
+                    font-weight: lighter;
+                    font-size: 1.1rem;
+                    margin-top: 0.3rem;
+                    opacity: 0.8;
+                }
+                .tag{
+                    // border: 1px solid red;
+                    width: 25px;
+                    height: 26px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    font-size: 0;
+                    background-image: url("http://pdpgbekst.bkt.clouddn.com/tag-online.jpg");
+                    background-size: cover;
+                    background-repeat: none;
+                }
+
+                
+            }
+            .lunbotu{
+                margin-top: 0.3rem;
+                width: 100%;
+                .swipe-box{
+                    overflow: hidden;
+                    position: relative;
+                    
+                    .pic-container{
+                        font-size: 0;
+                        position: relative;
+                        // float: left;
+
+                        // top: 0;
+                        left: 0;
+                        // width: 1000px;
+                        .photo-box{
+                            // float: left;
+                            width: 100%;
+                            display: inline-block;
+                            font-size: 0;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                
+               
+                .dots{
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 10px;
+                    margin-top: 10px;
+                    // border: 1px solid red;
+                    // display: flex;
+                    // justify-content: space-around;
+                    text-align: center;
+                    span{
+                        height: 6px;
+                        width: 6px;
+                        background-color: lightgrey;
+                        border-radius: 50%;
+                        display: inline-block;
+                        // border: 1px solid red;
+                        margin: 0 3px;
+                        vertical-align: top;
+                    }
+                    .active{
+                        background-color: @mublue;
+                    }
+                }
+            }
+            .info{
+                margin-top: 1.5rem;
+                h3,p{
+                    color: @bgbalck;
+                }
+                h3{
+                    font-family: @defaultFont;
+                    font-size: 1rem;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                    opacity: 1;
+                    // font-style: italic;
+                }
+                h3:nth-of-type(2){
+                    margin-top: 0.5rem;
+                    // margin-bottom: 0.5rem;
+                }
+                p{  position: relative;
+                    font-family: @defaultFont;
+                    // font-size: 0.8rem;
+                    font-weight: 400;
+                    line-height: 2;
+                    font-size: 1rem;
+                    margin-top: 2rem;
+                    opacity: 0.9;
+                    &::before{
+                        content: "";
+                        display: block;
+                        width: 12px;
+                        height: 3px;
+                        background-color: @bgbalck;
+                        position: absolute;
+                        top: -1rem;
+                        opacity: 0.2;
+                    }
+                }
+                
+            }
+        }
+        .project:nth-of-type(3),.project:nth-of-type(4){
+            .tag{
+                width: 29px;
+                height: 26px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 0;
+                background-image: url("http://pdpgbekst.bkt.clouddn.com/tag-con.jpg");
+                background-size: cover;
+                background-repeat: none;
+            }
+        }
+        .project:nth-of-type(5){
+            .tag{
+                width: 34px;
+                height: 26px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 0;
+                background-image: url("http://pdpgbekst.bkt.clouddn.com/tag-re.jpg");
+                background-size: cover;
+                background-repeat: none;
+            }
+        }
+        .other-project{
+            span{
+                font-size: 4rem;
+                font-family: @din;
+                -webkit-text-stroke: 1px #0E0B2B;
+                color: transparent;
+                letter-spacing: 4px;
+                // position: absolute;
+                // left: 500px;
+            }
+            svg{
+                position: relative;
+                top: -2rem;
+            }
+            div{
+                width: 100%;
+                margin-top: 4rem;
+                img{
+                    width: 100%;
+                }
+            }
+            div:last-of-type{
+                margin-bottom: 6rem;
+            }
+        }
+    }
+}
+.part3{
+    width: 100%;
+    .wrapper{
+        box-sizing: border-box;
+        width: 90%;
+        // height: 1200px;
+        // border: red solid 1px;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 5%;
+        margin-bottom: 6rem;
+        overflow: hidden;
+        .bg-text{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            img{
+                width:100%;
+            }
+        }
+        .articles{
+            position: relative;
+            z-index: 100;
+            margin-top: 4rem;
+            .art-title{
+                width: 100%;
+                position: relative;
+                margin-bottom: 1rem;
+                h1{
+                    font-family: @din;
+                    font-size: 2rem;
+                    letter-spacing: 3px;
+                    text-align: center;
+                    display: inline-block;
+                    // position: absolute;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                }
+                h3{
+                    font-family: @defaultFont;
+                    font-weight: 400;
+                    opacity: 0.4;
+                    text-align: right;
+                    opacity: 0;
+                }
+            }
+            .art-box{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                // border: 1px red solid;
+                a{
+                    // display: block;
+                    width: 47%;
+                    // flex-grow: 1;
+                    margin-bottom: 1rem;
+                    div{
+                        font-size: 0;
+                        width: 100%;
+                        img{
+                            width:100%;
+                            margin-bottom: 6px;
+                        }
+                        span{
+                            font-family: @defaultFont;
+                            font-size: 0.6rem;
+                            opacity: 0.5;;
+                            
+                        }
+                        span:last-of-type{
+                            float: right;
+                            // letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+        }
+        .tranlations{
+            // border: 1px solid red;
+            position: relative;
+            // z-index: 100;
+            margin-top: 4rem;
+            .trans-title{
+                width: 100%;
+                position: relative;
+                margin-bottom: 1rem;
+                h1{
+                    font-family: @din;
+                    font-size: 2rem;
+                    letter-spacing: 0.2rem;
+                    // text-indent: 3px;
+                    text-align: center;
+                    display: inline-block;
+                    // position: absolute;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    // display: inline-block;
+                }
+                h3{
+                    font-family: @defaultFont;
+                    font-weight: 400;
+                    opacity: 0.4;
+                    text-align: left;
+                    opacity: 0;
+                }
+            }
+            .trans-box{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
+                a{
+                    width: 47%;
+                    height: 14rem;
+                    div{
+                        img{
+                            width: 100%;
+                        }
+                        h1{
+                            font-family: @defaultFont;
+                            font-size: 0.8rem;
+                            font-weight: 400;
+                            line-height: 1.5;
+                        }
+                        h3{
+                            font-family: @defaultFont;
+                            font-size: 0.6rem;
+                            font-weight: 400;
+                            line-height: 1.5;
+                            opacity: 0.5;
+                            margin-top: 0.5rem;
+                            margin-bottom: 0.5rem;
+                        }
+                        span{
+                            font-family: @defaultFont;
+                            font-size: 0.6rem;
+                            opacity: 0.5;
+                            float: left;
+
+                            
+                        }
+                        span:last-of-type{
+                            float: right;
+                            // letter-spacing: 1px;
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+        .more-button{
+            // width: 100%;p
+            margin-top: 6rem;
+            font-size: 0;
+            span{
+                opacity: 0.5;
+                font-size: 1rem;
+                display: block;;
+                font-family: @din;
+                letter-spacing: 1px;
+                text-align: center;
+               text-decoration: underline;
+            }
+        }
+    }
+}
+.part4{
+    width: 100%;
+    background-color: #FFF;
+    overflow: hidden;
+    .wrapper{
+        box-sizing: border-box;
+        width: 90%;
+        // height: 1200px;
+        // border: red solid 1px;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 5%;
+        margin-bottom: 3rem;
+        
+        .add-icon{
+            // border: 1px red solid;
+            margin-top: 3rem;
+            font-size: 0;
+            a{
+                display: inline-block;
+                float: right;
+                margin-top: 0.3rem;
+            }
+            a:nth-of-type(1){
+                background-image: url('../img/tencent.jpg');
+                height: 11px;
+                width: 13px;
+                background-size: cover;
+            }
+            a:nth-of-type(2){
+                background-image: url('../img/bili.jpg');
+                height: 13px;
+                width: 35px;
+                background-size: cover;
+                margin: 0 0.8rem;
+                margin-top: 0.3rem;
+            }
+            a:nth-of-type(3){
+                background-image: url('../img/youtube.png');
+                height: 14px;
+                width: 21px;
+                background-size: cover;
+                transform: scale(0.7);
+                margin-top: 0.25rem;
+            }
+        }
+        .video-title{
+            margin-top: 2rem;
+            h1{
+                color: @bgbalck;
+                font-family: @defaultFont;
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+                opacity: 0.9;
+            }
+            h2{
+                color: @bgbalck;
+                font-family: @defaultFont;
+                font-weight: 100;
+                font-size: 1rem;
+                letter-spacing: 1px;
+                line-height: 1.6;
+                margin-top: 0.6rem;
+                opacity: 0.8;
+                margin-bottom: 1rem;
+            }
+            .video-info{
+                display: flex;
+                justify-content: space-between;
+                span{
+                    color: @bgbalck;
+                    font-size: 0.6rem;
+                    font-family: @defaultFont;
+                    font-weight: 400;
+                    opacity: 0.5;
+                }
+                div span:nth-of-type(2){
+                    font-family: @din;
+                    opacity: 0.8;
+                    font-weight: 400;
+                }
+            }
+        }
+        .video-box{
+            margin-top: 0.5rem;
+            width: 100%;
+            position: relative;
+            display: inline-block;
+            // border: 1px solid red;
+            &::after{
+                content: "";
+                display: block;
+                padding-bottom: 56.4%;
+            }
+            .video-content{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+            iframe{
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        }
+        .video-sites{
+            margin-top: 0.5rem;
+           span{
+               font-family: @din;
+                color: @bgbalck;
+                opacity: 0.4;
+                font-size: 0.6rem;
+                // letter-spacing: 1px;
+                // display: inline-block;
+           }
+           div{
+               float: right;
+               span{
+                   text-decoration: underline;
+                   opacity: 0.8;
+               }
+               a:nth-of-type(2) span{
+                    margin: 0 2rem;
+               }
+           }
+        }
+    }
+}
+footer{
+    width: 100%;
+    // height: 500px;
+    overflow: hidden;
+    // border: 1px solid red;
+    .info-box{
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 1rem;
+        padding-bottom: 11.5rem;
+        div{
+            span{
+                font-family: @din;
+                opacity: 0.3;
+                letter-spacing: 1px;
+            }
+        }
+        .qr-code{
+            width: 40%;
+            text-align: center;
+            float: left;
+            div{
+                margin-top: 0.5rem;
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .phone{
+            width: 40%;
+            text-align: center;
+            float: right;
+            div{
+                margin-top: 0.5rem;
+                img{
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+}

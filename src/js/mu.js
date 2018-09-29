@@ -11,17 +11,20 @@ var horNav = $('.horizontal-nav'),
     navHorText = $('.horizontal-nav a'),
     navHorTextLi = $('.horizontal-nav li');
 
+var menuBox = $('.menu-box > div');
+// console.log(menuBox)
 
 $('body').css('overflow', 'hidden');
 
 setDefaultAnimation();
-
-window.onload = function () {
-    init();
+init();
+setTimeout(function () {
+    
     $('.mask-layer').fadeOut();
     $('body').css('overflow', 'auto');
-}
+    initiAnimation()
 
+},3000) 
 
 
 
@@ -30,8 +33,6 @@ window.onload = function () {
 
 function init() {
     bindEvent();
-    
-    initiAnimation()
 }
 
 
@@ -46,11 +47,19 @@ function setDefaultAnimation() {
 }
 function initiAnimation() {
     $('.logo').animate({ 'top': '40px', 'opacity': 1 }, 500, 'swing');
-    $('.three-line').delay(500).animate({ 'right': '0px', 'opacity': 1 }, 500, 'swing');
+    // $('.three-line').delay(500).animate({ 'right': '0px', 'opacity': 1 }, 500, 'swing');
     $('.symbol-mu').animate({ 'left': '0px', 'opacity': 1 }, 500, 'swing');
-    $('.img-box').animate({ 'right': '350px', 'opacity': 1 }, 500, 'swing');
+    if(document.body.offsetWidth > 1440){
+        $('.img-box').animate({ 'right': '350px', 'opacity': 1 }, 500, 'swing');
+        $('.three-line').delay(500).animate({ 'right': '0px', 'opacity': 1 }, 500, 'swing');
+    }else{
+        $('.img-box').animate({ 'right': '200px', 'opacity': 1 }, 500, 'swing');
+        $('.three-line').delay(500).animate({ 'right': '-100px', 'opacity': 1 }, 500, 'swing');
+    }
+    
     $('.social-links').animate({'left':'0px','opacity': 1},500);
     $('.top-part').animate({'left':'0px','opacity': 1},500);
+    
 }
 
 function bindEvent() {
@@ -62,6 +71,12 @@ function bindEvent() {
 
         changeLogo(part1Height, part2Height, part3Height);
         changeNav();
+        changgeSelect(part1Height,part2Height,part3Height)
+        if (scroLen > 10000) {
+            $('.img-box').hide()
+        }else{
+            $('.img-box').show()
+        }
     });
     //点击竖版导航滚动到到相应的版块
     navVerText.on('click', function () {
@@ -80,7 +95,13 @@ function bindEvent() {
         navVerText.attr('class', 'nav-link').eq($(this).parent().index()).addClass('active');
         // return false;
     })
-
+    //目录区点击
+    menuBox.on('click',function(){
+        $(".item-selected").removeClass("item-selected");
+        $(this).addClass("item-selected");
+        // console.log($(this).attr("target-src"))
+        $("iframe").attr('src',$(this).attr("target-src"))
+    })
 }
 
 
@@ -88,7 +109,10 @@ function bindEvent() {
 function changeLogo(p1, p2, p3) {
     if (scroLen > (p1 - 120) && scroLen < (p1 + p2 - 120)) {
         $('.logo').addClass('black');
-        navVerText.css({ 'color': '#0E0B2B' })
+        navVerText.css({ 'color': '#0E0B2B' });
+        // navVerText.attr('class', 'nav-link');
+        // navVerText.eq(0).addClass('active');
+        
     } else if (scroLen > (p1 + p2 + p3 - 120)) {
         $('.logo').addClass('black');
         navVerText.css({ 'color': '#0E0B2B' })
@@ -96,6 +120,25 @@ function changeLogo(p1, p2, p3) {
     else {
         $('.logo').removeClass('black');
         navVerText.css({ 'color': '#FFFFFF' })
+    }
+}
+
+function changgeSelect(p1,p2,p3){
+    if (scroLen < (p1 - 120) ) {
+        
+        navVerText.attr('class', 'nav-link');
+        navVerText.eq(0).addClass('active');
+    } else if(scroLen > (p1 - 120) && scroLen < (p1 + p2 - 120)) {
+        navVerText.attr('class', 'nav-link');
+        navVerText.eq(1).addClass('active');
+    }
+    else if(scroLen > (p1 + p2- 120) && scroLen < (p1 + p2 + p3 - 120)){
+        navVerText.attr('class', 'nav-link');
+        navVerText.eq(2).addClass('active');
+    }
+    else{
+        navVerText.attr('class', 'nav-link');
+        navVerText.eq(3).addClass('active');
     }
 }
 
