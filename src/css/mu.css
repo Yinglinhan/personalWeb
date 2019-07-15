@@ -1,6 +1,6 @@
 @font-face {
     font-family:'mydin';
-    src: url('http://p2xzgvk13.bkt.clouddn.com/din.ttf') format('truetype');
+    src: url('http://mobile.handesign.me/din.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -1133,7 +1133,7 @@ footer a:nth-child(6) svg{
     right: 100px;
     transform: translateY(-50%);
     /* background-color: #3D06FF; */
-    background-image: url("http://pdn6ssoec.bkt.clouddn.com/wechat.jpg");
+    background-image: url("http://web.handesign.me/wechat.jpg");
     background-size: cover;
 }
 .phone-num{
@@ -1143,7 +1143,7 @@ footer a:nth-child(6) svg{
     top:56%;
     right: 00px;
     transform: translateY(-50%);
-    background-image: url("http://pdn6ssoec.bkt.clouddn.com/phone.jpg");
+    background-image: url("http://web.handesign.me/phone.jpg");
     background-size: cover;
     /* color: white;
     font-family: 'mydin'; */
